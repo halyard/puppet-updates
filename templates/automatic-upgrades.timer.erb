@@ -1,0 +1,10 @@
+[Unit]
+Description=Schedule pacman upgrades
+
+[Timer]
+OnBootSec=<%= @bootdelay %>
+OnUnitActiveSec=<%= @frequency %>
+
+[Install]
+WantedBy=multi-user.target
+

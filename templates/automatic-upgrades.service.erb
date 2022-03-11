@@ -1,0 +1,7 @@
+[Unit]
+Description=Run pacman upgrades
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/pacman -Syyu --noconfirm
+

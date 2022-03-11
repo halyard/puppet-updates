@@ -1,0 +1,16 @@
+{
+  "name": "halyard-updates",
+  "version": "0.0.3",
+  "author": "Les Aker",
+  "license": "MIT",
+  "summary": "Configure system updates",
+  "source": "https://github.com/halyard/puppet-updates",
+  "project_page": "https://github.com/halyard/puppet-updates",
+  "issues_url": "https://github.com/halyard/puppet-updates/issues",
+  "dependencies": [
+
+  ],
+  "operatingsystem_support": [
+
+  ]
+}
