@@ -18,7 +18,7 @@ class updates::archlinux (
   }
 
   service { 'automatic-upgrades.timer':
-    ensure  => running,
-    enabled => true,
+    ensure => running,
+    enable => true,
   }
 }
