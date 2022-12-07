@@ -1,0 +1,9 @@
+[Unit]
+Description=Schedule pacman cache clean
+
+[Timer]
+OnCalendar=weekly
+
+[Install]
+WantedBy=multi-user.target
+

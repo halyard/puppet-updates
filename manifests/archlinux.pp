@@ -21,4 +21,21 @@ class updates::archlinux (
     ensure => running,
     enable => true,
   }
+
+  file { '/etc/systemd/system/pacman-cache-clean.service':
+    ensure => file,
+    source => 'puppet:///modules/updates/pacman-cache-clean.service',
+    notify => Service['pacman-cache-clean.timer'],
+  }
+
+  file { '/etc/systemd/system/pacman-cache-clean.timer':
+    ensure => file,
+    source => 'puppet:///modules/updates/pacman-cache-clean.timer',
+    notify => Service['pacman-cache-clean.timer'],
+  }
+
+  service { 'pacman-cache-clean.timer':
+    ensure => running,
+    enable => true,
+  }
 }

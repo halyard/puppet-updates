@@ -1,0 +1,7 @@
+[Unit]
+Description=Run pacman cache clean
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/pacman -Sc --noconfirm
+
