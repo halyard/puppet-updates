@@ -1,0 +1,8 @@
+[Unit]
+Description=Run apt upgrades
+
+[Service]
+Type=simple
+Environment="DEBIAN_FRONTEND=noninteractive"
+ExecStart=/usr/bin/apt update && /usr/bin/apt -y upgrade
+

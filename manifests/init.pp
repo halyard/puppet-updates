@@ -6,9 +6,10 @@ class updates (
   String $bootdelay = '1min',
   String $frequency = '86400'
 ) {
-  case $facts['os']['family'] {
+  case $facts['os']['name'] {
     'Archlinux': { include updates::archlinux }
     'Arch': { include updates::archlinux }
-    default: { fail("Module does not support ${facts['os']['family']}") }
+    'Ubuntu': { include updates::ubuntu }
+    default: { fail("Module does not support ${facts['os']['name']}") }
   }
 }
